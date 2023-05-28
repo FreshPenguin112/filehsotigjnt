@@ -19,6 +19,7 @@
             arguments: {
               code: {
                 type: Scratch.ArgumentType.STRING,
+                defaultValue: "alert\('Hello World!'\)"
               }
             }
           },
@@ -29,16 +30,18 @@
             arguments: {
               codee: {
                 type: Scratch.ArgumentType.STRING,
+                defaultValue: "Math.PI"
               }
             }
           },
           {
             opcode: 'evalb',
-            blockType: Scratch.BlockType.COMMAND,
+            blockType: Scratch.BlockType.BOOLEAN,
             text: 'eval [codeee]',
             arguments: {
               codeee: {
                 type: Scratch.ArgumentType.STRING,
+                defaultValue: "Math.random() < 0.5"
               }
             }
           }
