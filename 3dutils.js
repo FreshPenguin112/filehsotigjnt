@@ -54,9 +54,9 @@
     }
     texture(args, util) {
       var textureLoader = new three.TextureLoader();
-      var texture = textureLoader.load(args.url1.toString());
+      var texture = textureLoader.load(args.url.toString());
 
-      var object = scene.getObjectByName(args.object1.toString());
+      var object = scene.getObjectByName(args.object.toString());
       if (object) {
         object.traverse(function(child) {
           if (child instanceof three.Mesh) {
