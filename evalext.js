@@ -41,7 +41,7 @@
             arguments: {
               codeee: {
                 type: Scratch.ArgumentType.STRING,
-                defaultValue: "Math.random() < 0.5"
+                defaultValue: "Math\.random\(\) \< 0\.5"
               }
             }
           }
