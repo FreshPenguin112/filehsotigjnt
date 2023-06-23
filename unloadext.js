@@ -22,8 +22,13 @@
     }
     onunload(args, util) {
       var x = false;
-      window.onunload = function(){var x = true}
-      if (x){return true}
+      window.onunload = function() {
+        x = true;
+      };
+      window.onbeforeunload = function() {
+        x = true;
+      };
+      return x;
     }
   }
   Scratch.extensions.register(new ext());
