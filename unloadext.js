@@ -21,7 +21,9 @@
       };
     }
     onunload(args, util) {
-      window.onunload = function(){return true}
+      var x = false;
+      window.onunload = function(){var x = true}
+      if (x){return true}
     }
   }
   Scratch.extensions.register(new ext());
