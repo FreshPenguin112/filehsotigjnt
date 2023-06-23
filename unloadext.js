@@ -4,8 +4,8 @@
   if (!Scratch.extensions.unsandboxed) {
     throw new Error('This Extension Must Run Unsandboxed');
   }
-  const vm = Scratch.vm
-  window.onbeforeunload = function(){vm.runtime.startHats("unload_onunload")}
+  const vm = Scratch.vm;
+  window.onbeforeunload = function(){vm.runtime.startHats("unload_onunload")};
 
   class ext {
     getInfo() {
@@ -20,6 +20,7 @@
           }
         ]
       };
+      onunload(args,util){}
     }
   Scratch.extensions.register(new ext());
 })(Scratch);
