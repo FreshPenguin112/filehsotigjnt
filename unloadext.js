@@ -5,7 +5,7 @@
     throw new Error('This Extension Must Run Unsandboxed');
   }
   const vm = Scratch.vm;
-  window.onbeforeunload = function(){vm.runtime.startHats("unload_onunload")};
+  window.onbeforeunload = function(){vm.runtime.startHats("onunload")};
 
   class ext {
     getInfo() {
@@ -16,7 +16,8 @@
           {
             opcode: 'onunload',
             blockType: Scratch.BlockType.HAT,
-            text: 'when tab closed'
+            text: 'when tab closed',
+            isEdgeActivated: false
           }
         ]
       };
