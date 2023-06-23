@@ -5,6 +5,7 @@
     throw new Error('This Extension Must Run Unsandboxed');
   }
   const vm = Scratch.vm
+  window.onbeforeunload = function(){vm.runtime.startHats("unload_onunload")}
 
   class ext {
     getInfo() {
@@ -20,16 +21,5 @@
         ]
       };
     }
-    onunload(args, util) {
-      var x = false;
-      window.onunload = function() {
-        x = true;
-      };
-      window.onbeforeunload = function() {
-        x = true;
-      };
-      return x;
-    }
-  }
   Scratch.extensions.register(new ext());
 })(Scratch);
