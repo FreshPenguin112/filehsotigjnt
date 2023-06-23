@@ -5,7 +5,7 @@
     throw new Error('This Extension Must Run Unsandboxed');
   }
   var vm = Scratch.vm;
-  window.onbeforeunload = function(){vm.runtime.startHats("onunload")};
+  window.onbeforeunload = function(){vm.runtime.startHats("unload_onunload")};
 
   class ext {
     getInfo() {
