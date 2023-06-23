@@ -21,7 +21,6 @@
           }
         ]
       };
-      onunload(args,util){}
     }}
   Scratch.extensions.register(new ext());
 })(Scratch);
