@@ -25,7 +25,7 @@
 
 (function (Scratch) {
     'use strict';
-
+    Scratch.translate = function(a){return a}
     var rxFSfi = new Array();
     var rxFSsy = new Array();
     var Search, i, str, str2;
