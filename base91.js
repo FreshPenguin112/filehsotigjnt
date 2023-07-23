@@ -81,5 +81,5 @@
       return this.base91_decode(args.TEXT.toString());
     }
   }
-  Scratch.extensions.register(new b64());
+  Scratch.extensions.register(new b91());
 })(Scratch);
