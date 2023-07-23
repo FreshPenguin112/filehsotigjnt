@@ -36,7 +36,7 @@
 				]
 			};
 		}
-		base91_encode(e) {
+		base91_encode(input) {
 			const encoder = new TextEncoder();
 			const bytes = encoder.encode(input);
 			const length = bytes.length;
